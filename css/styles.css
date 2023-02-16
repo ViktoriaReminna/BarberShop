@@ -1,0 +1,57 @@
+html,
+body{
+    font-family: "Open Sans", sans-serif;
+    }
+
+   .header {
+    background-color: gray;
+    }
+    .list{
+        list-style: none;
+    }
+    .link{
+        text-decoration: none;
+    }
+   .header-navigation {}
+
+   .header-logo {}
+
+   .header-list {}
+
+   .header-item {}
+   .header-item {}
+
+   .header-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em; 
+    color: #FFFFFF;
+   }
+
+   .header-tel {}
+
+   .header-btn {
+    font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+    
+        color: #FFFFFF;
+   }
+   .hero {}
+
+   .hero-list {}
+
+   .hero-item {}
+
+   .hero-link {}
+
+   .htro-subtitle {}
+
+   .hero-title {}
+
+   .hero-description {}
