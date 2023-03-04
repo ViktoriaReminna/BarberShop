@@ -99,7 +99,7 @@ body{
    .header-item {}
 
    .header-link {
-    margin-left: ;
+   padding: 24px 0;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
@@ -145,7 +145,7 @@ body{
    .hero-content{
     background-color: aqua;
     padding: 272px 100px 208px;
-    flex-grow: 1;
+     flex-grow: 1; 
    }
 
    .hero-item {}
