@@ -455,6 +455,7 @@ body{
 }
 .barbers-social-list {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -475,8 +476,13 @@ body{
 }
 .barbers-social-link:is(:hover, :focus) { 
     background-color: #FF6C00;
-    color: #FFFFFF;
+    color: white;
+   
 }
+/* .barbers-social-link:is(:hover, :focus) .barbers-social-link {
+fill: white;
+
+} */
  .barbers-social-icon {
    
     fill: currentColor;
