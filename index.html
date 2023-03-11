@@ -26,10 +26,10 @@
           </a>
           <ul class="header-list list">
             <li class="header-item">
-              <a href="#" class="header-link link">About</a>
+              <a href="#" class="header-link link ">About</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link link">Services and prices</a>
+              <a href="#" class="header-link link active">Services and prices</a>
             </li>
             <li class="header-item">
               <a href="#" class="header-link link">Barbers</a>
@@ -42,33 +42,35 @@
         <a href="tel:+380441111111" class="header-tel link"
           >+38 044 111 11 11</a
         >
-        <button type="button" class="header-btn btn">Online-booking</button>
+        <button type="button" data-modal-open class="header-btn btn">Online-booking</button>
       </div>
     </header>
     <main>
       <!-- Hero section -->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="hero-link link"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="hero-link link"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-list-wrap">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="hero-link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="hero-link link"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div >
 
           <div class="hero-content">
             <p class="hero-subtitle subtitle">A hair salon for men in Kyiv</p>
@@ -214,13 +216,15 @@
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img
-                src="./images/team1.jpg"
-                alt="barber work"
-                width="370"
-                height="346"
-              />
-
+              <div class="barbers-top-wrap">
+                <img
+                  src="./images/team1.jpg"
+                  alt="barber work"
+                  width="370"
+                  height="346"
+                />
+  <p class="barbers-item-text-overlay">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem quae, ipsam soluta aut quod optio tenetur minus perferendis blanditiis possimus suscipit beatae est quisquam quos magnam unde, odit iusto corrupti.</p>
+              </div>
               <div class="barbers-content">
                 <h3 class="barbers-item-title">John Smith</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
@@ -257,6 +261,28 @@
               <div class="barbers-content">
               <h3 class="barbers-item-title">Michele Doe</h3>
               <p class="barbers-item-text">Extreme Barber</p>
+              <ul class="barbers-social-list list">
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link">
+                  <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-instagram"
+                  ></use>
+                 </svg></a></li>
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link"> 
+                    <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-twitter"
+                  ></use></svg></a></li>
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link"> <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-facebook"
+                  ></use></svg></a></li>
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link"> <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"
+                  ></use></svg></a></li>
+                </ul>
+             
               </div>
             </li>
             <li class="barbers-item">
@@ -269,6 +295,28 @@
               <div class="barbers-content">
               <h3 class="barbers-item-title">Alan Black</h3>
               <p class="barbers-item-text">Extreme Barber</p>
+              <ul class="barbers-social-list list">
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link">
+                  <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-instagram"
+                  ></use>
+                 </svg></a></li>
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link"> 
+                    <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-twitter"
+                  ></use></svg></a></li>
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link"> <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-facebook"
+                  ></use></svg></a></li>
+                 <li class="barbers-social-item">
+                  <a href="" class="barbers-social-link link"> <svg class="barbers-social-icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"
+                  ></use></svg></a></li>
+                </ul>
+             
               </div>
               
             </li>
@@ -374,5 +422,11 @@
         </li>
       </ul>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close class="modal-close">X</button>
+      </div>
+      </div>
+      <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -36,6 +36,11 @@ body{
             border: 1px solid var(--acccent-color);
             border-radius: 25px;
             padding: 12px 20px;
+            transition: color 0.35s linear, background-color 0.35s linear;
+    }
+    .btn:is(:hover, :focus) {
+        color: #FFFFFF;
+        background-color: var(--acccent-color);
     }
     .title {
         font-family: 'Raleway', sans-serif;
@@ -77,8 +82,11 @@ body{
         }
 /* -----------------------Header ---------------*/
    .header {
-    background-color: gray;
-    padding: 32px 0;
+      padding: 32px 0;
+     position: absolute;
+     top: 0;
+     left: 0;l
+
     }
     .header-container {
         display: flex;
@@ -114,11 +122,24 @@ body{
     line-height: 1.33;
     letter-spacing: 0.1em; 
     color: #FFFFFF;
+    position: relative;
+    transition: color 0.35s linear;
    }
 .header-link:hover,.header-link:focus {
     color: var(--acccent-color);
 }
-
+.header-link.active {
+    color: var(--acccent-color);
+}
+.header-link.active::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--acccent-color);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
    .header-tel {
     margin-left: auto;
     margin-right: 43px;
@@ -145,7 +166,26 @@ body{
    }
 
    .hero-list {
-    width: 100px;
+       width: 100px;
+        display: flex;
+        gap: 30px;
+        transform: rotate(-90deg) translateX(100%);
+        transform-origin: bottom-left;
+        position: relative;
+        padding-left: 90px;
+   }
+   .hero-list::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: #303030;
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+   }
+   .hero-list-wrap {
+  display: flex;
+    align-items: flex-end;
    }
    .hero-content{
     background-color: aqua;
@@ -166,6 +206,7 @@ body{
         line-height: 1,36;
         letter-spacing: 0.2em;
         color: #303030;
+        transition: color 0.35s linear;
     }
 .hero-link:hover,.hero-link:focus {color: var(--acccent-color);}
    .hero-subtitle {
@@ -368,6 +409,7 @@ body{
                         color: #303030;
                         display: flex;
                         align-items: flex-start;
+                        position: relative;
                 }
                  .benefits-item>span::after {
                      content: '+';
@@ -375,6 +417,9 @@ body{
                      font-size: 16px;
                      line-height: calc(22/16);
                      color: var(--acccent-color);
+                     position: absolutete;
+                     top: 5px;
+                     right: 0;
                  }
                 .benefits-item-text {
                     font-weight: 600;
@@ -432,6 +477,7 @@ body{
 .barbers-item {
     width: calc((100% - 60px)/3);
 }
+
 .barbers-content {
     padding: 30px;
 
@@ -473,6 +519,7 @@ body{
     border-radius: 50%;
     background-color: gray ;
     color: #000;
+    transition: color 0.35s linear, background-color 0.35s linear;
 }
 .barbers-social-link:is(:hover, :focus) { 
     background-color: #FF6C00;
@@ -487,7 +534,26 @@ fill: white;
    
     fill: currentColor;
 }
-
+.barbers-top-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.barbers-item:hover .barbers-item-text-overlay {
+    transform: translateY(0);
+}
+.barbers-item-text-overlay {
+    color: #FFFFFF;
+    background-color: #FF6C00;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.35s linear;
+    overflow: auto;
+}
 /* ---------------Gallery--------- */
 .gallery {
     padding: 120px 0;
@@ -495,6 +561,7 @@ fill: white;
 
 .gallery-subtitle {
         color: var(--secondary-title-color);
+        margin-bottom: 44px;
 }
 
 
@@ -572,4 +639,47 @@ margin-bottom: var(--basic-margin);
         line-height: 1,67;
         letter-spacing: 0.02em;
         color: #9DA4BD;
+}
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    transition: opasity 0.35s linear, visibility 0.35s linear;
+
+}
+
+.modal {
+    width: 500px;
+    min-height: 500px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.35s linear;
+
+
+}
+
+.modal-close {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 50%;
+    color:aqua;
+    margin-left: auto;
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+    transform: translate(-50%,-50%) scale(0);
 }
