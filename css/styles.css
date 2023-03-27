@@ -747,13 +747,13 @@ margin-bottom: var(--basic-margin);
     resize: vertical;
   
 }
-.form-label-checkbox {
+/* .form-label-checkbox {
     font-size: 14px;
     font-weight: 16px;
     color: #303030;
     display: flex;
     align-items: center;
-}
+} */
 .form-label-checkbox::before {
     /* content: "";
     width: 16px;
